@@ -15,3 +15,9 @@ movies = {"Fight Club": 1996, "Pulp Fiction": 1991, "Unforgiven": 1992}
 movies.each { |k,v| puts v }
 
 puts movies[:"Fight Club"]
+
+date_array = []
+
+movies.each { |k,v| date_array += [v] }
+
+puts date_array
