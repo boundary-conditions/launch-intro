@@ -33,3 +33,12 @@ person = {first_name: "Charles", last_name: "Keenan", age: 36, city: "Dartmouth"
 person.each_key { |k| puts k }
 person.each_value { |v| puts v }
 person.each { |k,v| puts "#{v} is his #{k}" }
+
+#4
+person = {name: 'Bob', occupation: 'web developer', hobbies: 'painting'}
+person.fetch(:name)
+# or
+person[:name]
+
+#5
+
