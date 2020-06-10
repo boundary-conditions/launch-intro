@@ -7,6 +7,8 @@ family = {  uncles: ["bob", "joe", "steve"],
 
 immediate_family = family.select { |k,v| k == :brothers || k == :sisters }
 
+immediate_family_arr = immediate_family.values.flatten
+
 #2 merge! is destructive, as in it modifies the hash its called on, whereas merge outputs a new hash.
 h1 = {a: 1, b: 2, c: 3, d: 4}
 h2 = {e: 5, f: 6, g: 7, h: 8}
@@ -25,3 +27,9 @@ def destructive(h1,h2)
   puts "h2 remains unchanged: \n#{h2}"
 end
 
+#3
+person = {first_name: "Charles", last_name: "Keenan", age: 36, city: "Dartmouth"}
+
+person.each_key { |k| puts k }
+person.each_value { |v| puts v }
+person.each { |k,v| puts "#{v} is his #{k}" }
