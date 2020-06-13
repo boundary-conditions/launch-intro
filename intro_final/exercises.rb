@@ -78,6 +78,38 @@ contact_data.each do |a|
   end 
 end
 
+#Using the hash you created from the previous exercise, demonstrate how you would access Joe's email and Sally's phone number?
+puts "Joe Smith's email is #{contacts["Joe Smith"][:email]}"
+contacts["Sally Johnson"][:phone]
+
+#Use Ruby's Array method delete_if and String method start_with? to delete all of the words that begin with an "s" in the following array.
+arr = ['snow', 'winter', 'ice', 'slippery', 'salted roads', 'white trees']
+# s = arr.length-1
+# while s > 0
+#  arr.delete_if(arr[s].start_with?("s")) ### My crazy attempt before consulting the ruby docs.
+#  s -= 1
+# end
+
+arr.delete_if { |s| s.start_with?("s") }
+#Then recreate the arr and get rid of all of the words that start with "s" or starts with "w".
+arr.delete_if { |s| s.start_with?("s","w") }
+
+#Take the following array:
+
+a = ['white snow', 'winter wonderland', 'melting ice',
+'slippery sidewalk', 'salted roads', 'white trees']
+
+#and turn it into a new array that consists of strings containing one word. 
+#(ex. ["white snow", etc...] → ["white", "snow", etc...]. 
+#Look into using Array's map and flatten methods, as well as String's split method.
+new_array = a.map { |s| s.split(" ") }
+new_array.flatten!
+
+
+
+
+
+
 
 
 
